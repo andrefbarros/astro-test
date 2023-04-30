@@ -1,0 +1,55 @@
+---
+import logo from '../imgs/logo.svg'
+---
+
+<header class="header">
+  <div class="container">
+    <div class="logo">
+      <a href="/">
+        <img src={logo} alt="Logo" />
+      </a>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/">About us</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<style>
+  .header {
+    height: 70px;
+    background: var(--color-primary);
+  }
+
+  .header .container {
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+  }
+
+  .header img {
+    height: 35px;
+    vertical-align: middle;
+  }
+
+  .header nav ul {
+    display: flex;
+  }
+
+  .header nav ul li {
+    padding: 0 10px;
+  }
+
+  .header nav ul li a {
+    color: #fff;
+  }
+
+  .header nav ul li a:hover {
+    color: var(--color-secondary);
+  }
+</style>

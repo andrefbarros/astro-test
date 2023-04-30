@@ -1,0 +1,45 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Sunflower from "../components/Sunflower.astro";
+import PackageManagers from "../components/PackageManagers.astro";
+import Car from "../components/Car.astro";
+import TextGlow from "../components/TextGlow.astro";
+---
+
+<Layout>
+  <section class="page-content">
+    <div class="container">
+      <h2>Welcome to Astro!</h2>
+      <p>This is a Astro repository test to try different new features and see how everything works.</p>
+
+      <h3>Get started!</h3>
+      <Car />
+      <Sunflower />
+      <TextGlow text={'Astro'}/>
+      <PackageManagers names={['YARN', 'NPM', 'PNPM']} commands={['$ npm create astro@latest', '$ yarn create astro@latest', '$ pnpm create astro@latest']}/>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .container {
+    text-align: center;
+  }
+
+  @keyframes textglow {
+    from {
+      text-shadow: 0 0 25px yellow;
+    }
+    to {
+      text-shadow: 0 0 25px blue;
+    }
+
+  }
+
+  @keyframes atag {
+    from {
+      box-shadow: 0 0 5px #a741ff;
+    }
+  }
+ 
+</style>

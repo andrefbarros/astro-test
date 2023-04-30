@@ -1,0 +1,33 @@
+---
+import carLogo from '../imgs/car.jpg';
+---
+
+<a>
+  <img class="car" src={carLogo} alt="Car Logo" />
+</a>
+
+<style>
+
+  @keyframes dissolve {
+    from {
+      visibility: hidden;
+      opacity: 0;
+    }
+    to {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+  
+  .car {
+  width: 100%;
+  max-width: 720px;
+  height: 100%;
+  margin: 0 auto 12rem;
+  display: block;
+  border: 1ch solid blueviolet;
+  box-sizing: border-box;
+  box-shadow: 0 0 50px 5px blueviolet; /* add box-shadow property to create a glowing effect */
+  animation: dissolve 4s ease-in-out infinite alternate;
+}
+</style>

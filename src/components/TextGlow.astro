@@ -1,0 +1,45 @@
+---
+export interface Props {
+  text?: string;
+}
+
+const { text } = Astro.props as Props;
+
+---
+
+<div class="textGlow">
+  <h3>{text}</h3>
+</div>
+
+<style>
+
+  .textGlow {
+    background-color: black;
+    width: 720px;
+    height: 400px; /* modify the height to 100vh to make the div take up the full viewport height */
+    margin: 0 auto;
+    display: flex; /* add flex display to the div */
+    justify-content: center; /* center the content horizontally */
+    align-items: center; /* center the content vertically */
+  }
+
+  .textGlow h3 {
+    text-align: center;
+    font-size: 5rem;
+    color: yellow;
+    text-shadow: 0 0 10px yellow;
+
+    animation: textglow 2s ease-in-out infinite alternate;
+  }
+
+  @keyframes textglow {
+    from {
+      text-shadow: 0 0 25px yellow;
+    }
+    to {
+      text-shadow: 0 0 25px blue;
+    }
+
+  }
+
+</style>

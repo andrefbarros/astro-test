@@ -1,0 +1,79 @@
+---
+export interface Props {
+  commands: string[];
+  names: string[];
+}
+
+const { commands, names } = Astro.props as Props;
+---
+
+<div class="package">
+  <h2 class="h2">How to install astro:</h2>
+  <ul class="pack-header">
+    {names.map(name => (
+      <li>{name}</li>
+    ))}
+  </ul>
+  <ul class="pack-content">
+    {commands.map(content => (
+      <li class="command">{content}</li>
+    ))}
+  </ul>
+</div>
+
+<style>
+  .h2 {
+    margin-bottom: 20px;
+    position: relative;
+  }
+
+  .h2::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #fff;
+    animation: type 3.5s steps(50) infinite;
+  }
+
+  @keyframes type {
+    from {
+      width: 0;
+      opacity: 2;
+    }
+    to {
+      width: 100%;
+      opacity: 0;
+    }
+  }
+
+  .package {
+    margin-top: 30px;
+  }
+
+  .pack-header {
+    display: flex;
+    background: #333;
+    color:: #fff;
+    padding: 5px 20px;
+  }
+
+  .pack-header li {
+    margin-right: 20px;
+    cursor: pointer;
+  }
+
+  .pack-header li:hover {
+    color: #0366d6;
+  }
+
+  .pack-content {
+    font-size: 18px;
+    padding: 20px;
+    border: 1px solid #333;
+    font-weight: bold;
+    background: beige;
+  }
+</style>

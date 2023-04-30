@@ -1,0 +1,33 @@
+---
+import sunflower from '../imgs/sunflower.jpg';
+---
+
+<a>
+  <img class="sunflower" src={sunflower} alt="Sunflower" />
+</a>
+
+<style>
+  
+  .sunflower {
+  width: 100%;
+  max-width: 360px;
+  height: 100%;
+  margin: 0 auto 12rem;
+  display: block;
+  border-radius: 75%;
+
+  animation: glow 30s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from {
+      box-shadow: 0 0 50px 25px yellow;
+      transform: rotate(0deg);
+    }
+    to {
+      box-shadow: 0 0 50px 15px red;
+      transform: rotate(360deg);
+    }
+}
+
+</style>
